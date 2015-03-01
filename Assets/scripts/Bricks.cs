@@ -15,7 +15,7 @@ public class Bricks : MonoBehaviour {
 		if (this.name == "blueBrick") {
 			GameManager.instance.score += 9;		
 		}
-		if(this.name == "greenBricks"){
+		if(this.name == "greenBrick"){
 			GameManager.instance.score += 14;
 		}
 		GameManager.instance.OnBlockDestroyed ();
