@@ -22,5 +22,5 @@ public class Bricks : MonoBehaviour {
 		Destroy (gameObject);
 		Destroy (particle, 5f);
 	}
-
+	// Kommentar lol
 }
