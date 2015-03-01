@@ -66,7 +66,7 @@ public class Controller : MonoBehaviour
 		foreach(ContactPoint contact in  col.contacts){
 			if(contact.thisCollider == collider){
 				float ballangle = contact.point.x - transform.position.x;
-				contact.otherCollider.rigidbody.AddForce(200*ballangle,300,0);
+				contact.otherCollider.rigidbody.AddForce(0*ballangle,0,0);
 			}
 		}
 
