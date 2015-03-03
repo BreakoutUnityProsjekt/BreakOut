@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
 
 	public int life = 3;
-	public int blocks = 100;
+	public int blocks = 144;
 	public int score = 0;
 	public int restartDelay = 3;
 	public Text livesText;
@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour {
 	}
 	void Restart(){
 		Application.LoadLevel (1);
+		HalfTheSize.halfSize = false;
 	}
 	
 	void WinOrLoseCheck(){
@@ -49,7 +50,7 @@ public class GameManager : MonoBehaviour {
 		livesText.text = "Lives: " + life;
 		Destroy (clonePaddle);
 		Controller.instance.DestroyBall ();
-		Invoke ("SetupPaddle", 1);
+		Invoke ("SetupPaddle", 3);
 		WinOrLoseCheck ();
 	}
 	

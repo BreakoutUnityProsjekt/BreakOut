@@ -7,7 +7,8 @@ public class Pause : MonoBehaviour {
 	private bool pauseGame = false;
 	private bool showText = false;
 	public GameObject pausedGame;
-
+	public GameObject exitGame;
+	public GameObject restartGame;
 
 	void Update(){
 
@@ -29,9 +30,12 @@ public class Pause : MonoBehaviour {
 		}
 
 		if (showText == true) {
-
+			exitGame.SetActive(true);
+			restartGame.SetActive(true);
 			pausedGame.SetActive(true);
 		} else{
+			exitGame.SetActive(false);
+			restartGame.SetActive(false);
 			pausedGame.SetActive(false);
 		}
 

@@ -7,10 +7,11 @@ public class Bricks : MonoBehaviour {
 	private GameObject particle = null;
 
 
+
 	void OnCollisionEnter(Collision other){
 		// animating the particles when the block is destroyed
 		particle = (GameObject) Instantiate (brickParticle, transform.position, Quaternion.identity);
-
+	
 		// Simple way of adding more score to the diffrent colored bricks
 		if(this.name == "greenBrick"){
 			GameManager.instance.score += 1;
@@ -31,11 +32,11 @@ public class Bricks : MonoBehaviour {
 		// Adds more speed to the ball from these bricks
 		if (this.name == "purpleBrick") {
 			GameManager.instance.score += 6;
-			Controller.instance.speedFactor += 1;
+			Controller.instance.speedFactor += 3;
 		}
 		if (this.name == "deepblueBrick") {
 			GameManager.instance.score += 7;
-			Controller.instance.speedFactor += 2;
+			Controller.instance.speedFactor += 5;
 		}
 
 		//Destroying blocks and particles

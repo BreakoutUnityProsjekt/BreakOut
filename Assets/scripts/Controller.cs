@@ -17,7 +17,8 @@ public class Controller : MonoBehaviour
 	public float ballspeed = 4000f;
 	public static Controller instance;
 	public float speedFactor = 0;
-
+	public int outerEdge = 10;
+	public int innerEdge = 6;
 	
 		// Use this for initialization
 	void Start (){
@@ -33,6 +34,12 @@ public class Controller : MonoBehaviour
 
 			if(HalfTheSize.halfSize == true){
 				xOffset = xOffset / 2 + 3;
+				innerEdge = 2;
+				outerEdge = 5;
+			} else {
+				xOffset = 17f;
+				innerEdge = 6;
+				outerEdge = 10;
 			}
 
 
@@ -68,26 +75,31 @@ public class Controller : MonoBehaviour
 		foreach(ContactPoint contact in  col.contacts){
 			if(contact.thisCollider == collider){
 				float ballangle = contact.point.x - transform.position.x;
-				if(ballangle > 8){
+				if(ballangle > outerEdge){
 					ballRigidbody.AddTorque(new Vector3(ballRigidbody.velocity.x * 1.5f, ballRigidbody.velocity.y, ballRigidbody.velocity.z));
 					ballRigidbody.velocity = new Vector3(56.569f + speedFactor, 56.569f + speedFactor, 0);
 					Debug.Log(ballRigidbody.velocity);
 					
-				} else if (ballangle < -8){
+				} else if (ballangle < -outerEdge){
 				
 					ballRigidbody.AddTorque(new Vector3(ballRigidbody.velocity.x * 1.5f, ballRigidbody.velocity.y, ballRigidbody.velocity.z));
-					//ballRigidbody.velocity = Vector3.Reflect (new Vector3(ballRigidbody.velocity.x * 2,ballRigidbody.velocity.y / 2, 0), ballRigidbody.velocity.normalized);e
 					ballRigidbody.velocity = new Vector3(-56.569f - speedFactor, 56.569f + speedFactor, 0);
 
 				} else {
-					//ballRigidbody.velocity = Vector3.Reflect (new Vector3(ballRigidbody.velocity.x * 2,ballRigidbody.velocity.y / 2, 0), ballRigidbody.velocity.normalized);
-					//ballRigidbody.velocity = new Vector3(ballRigidbody.velocity.x, ballRigidbody.velocity.y, 0);
 					if(ballRigidbody.velocity.y < 50){
 						ballRigidbody.velocity = new Vector3(-40f - speedFactor, 69.29f + speedFactor, 0f);
 					} else if(ballRigidbody.velocity.y > 140){
 						ballRigidbody.velocity = new Vector3(40f + speedFactor, 69.29f + speedFactor, 0f); 
 					}
 				}
+				if(ballangle > innerEdge && ballangle <= outerEdge){
+					ballRigidbody.velocity = new Vector3(20.706f + speedFactor, 77.274f + speedFactor, 0);
+				}
+				if(ballangle < -innerEdge && ballangle >= -outerEdge){
+					ballRigidbody.velocity = new Vector3(-20.706f - speedFactor, 77.274f + speedFactor, 0);
+
+				}
+				Debug.Log("Ballangle: " + ballangle);
 			}
 		}
 
