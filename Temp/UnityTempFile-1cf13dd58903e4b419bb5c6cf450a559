@@ -44,6 +44,7 @@
 -define:UNITY_EDITOR
 -define:UNITY_EDITOR_OSX
 'Assets/scripts/Ball.cs'
+'Assets/scripts/Bounty.cs'
 'Assets/scripts/BrickTest.cs'
 'Assets/scripts/Bricks.cs'
 'Assets/scripts/Controller.cs'

@@ -11,11 +11,9 @@ public class Ball : MonoBehaviour {
 		collisions++;
 		if (collisions == 4) {
 			Controller.instance.speedFactor = 10;
-			Bounty.spawn.spawnBlock();
 		}
 		if (collisions == 12) {
 			Controller.instance.speedFactor = 20;
-			Bounty.spawn.spawnBlock();
 		}
 	}
 
