@@ -19,7 +19,7 @@ public class Bricks : MonoBehaviour {
 
 		// PowerUp 10%
 		rand = Random.Range (0,100);
-		if (rand < 100) {
+		if (rand < 10) {
 			PowerUp.instance.Power();
 		}
 

@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour {
 
 	public void GainLife(){
 		life++;
+		livesText.text = "Lives: " + life;
 	}
 
 	void SetupPaddle(){
