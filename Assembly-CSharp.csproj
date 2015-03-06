@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{96F981D8-A23E-8122-F301-A6DAE320AF66}</ProjectGuid>
+	<ProjectGuid>{D5201B35-6EC1-A8EF-F52F-A750C3747921}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -66,7 +66,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+<<<<<<< Updated upstream
       <Project>{3BF2E433-3D4B-EA7D-0E18-4A21D8AD7473}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+=======
+      <Project>{A3418377-6DC1-0A38-BE71-7A755278C610}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+>>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
