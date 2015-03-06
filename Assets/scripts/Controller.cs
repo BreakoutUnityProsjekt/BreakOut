@@ -20,7 +20,7 @@ public class Controller : MonoBehaviour
 	public int outerEdge = 10;
 	public int innerEdge = 6;
 	
-		// Use this for initialization
+	// Use this for initialization
 	void Start (){
 		//Spawing the ball
 		spawnBall ();
@@ -32,10 +32,15 @@ public class Controller : MonoBehaviour
 		if (Input.GetAxis ("Horizontal") != 0) {
 			transform.position = new Vector3 (transform.position.x + Input.GetAxis ("Horizontal") * speed * Time.deltaTime, ypos, zpos);
 
-			if(HalfTheSize.halfSize == true){
+			if(PaddleSize.halfSize == true && !PowerUp.instance.biggerPaddle){
 				xOffset = xOffset / 2 + 3;
 				innerEdge = 2;
 				outerEdge = 5;
+			} 
+			else if(PowerUp.instance.biggerPaddle == true){
+				xOffset = 24;
+				outerEdge = 17;
+				innerEdge = 9;
 			} else {
 				xOffset = 17f;
 				innerEdge = 6;
@@ -62,7 +67,7 @@ public class Controller : MonoBehaviour
 						
 
 		}
-		//Debug.Log (ballRigidbody.velocity);
+
 
 	}
 

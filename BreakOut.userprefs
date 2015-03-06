@@ -1,16 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Controller.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\PaddleSize.cs">
     <Files>
-      <File FileName="Assets\scripts\Controller.cs" Line="79" Column="6" />
-      <File FileName="Assets\scripts\Ball.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\HalfTheSize.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\DeadZone.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Bricks.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Pause.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\LoadOnClick.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Controller.cs" Line="30" Column="26" />
+      <File FileName="Assets\scripts\PaddleSize.cs" Line="21" Column="1" />
+      <File FileName="Assets\scripts\PowerUp.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\BallMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ScoreScreen.cs" Line="17" Column="1" />
+      <File FileName="Assets\scripts\StartBallMovment.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

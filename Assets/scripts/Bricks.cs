@@ -5,13 +5,24 @@ public class Bricks : MonoBehaviour {
 
 	public GameObject brickParticle;
 	private GameObject particle = null;
+	private float rand;
+	public static Bricks instance;
 
+	void Start(){
+		instance = this;
+	}
 
 
 	void OnCollisionEnter(Collision other){
 		// animating the particles when the block is destroyed
 		particle = (GameObject) Instantiate (brickParticle, transform.position, Quaternion.identity);
-	
+
+		// PowerUp 10%
+		rand = Random.Range (0,100);
+		if (rand < 10) {
+			PowerUp.instance.Power();
+		}
+
 		// Simple way of adding more score to the diffrent colored bricks
 		if(this.name == "greenBrick"){
 			GameManager.instance.score += 1;

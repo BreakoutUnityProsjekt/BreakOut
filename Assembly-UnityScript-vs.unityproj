@@ -49,7 +49,6 @@
      <Compile Include="Assets\KY_effects\Script\ConGUI.js" />
      <Compile Include="Assets\KY_effects\Script\Lighting.js" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
-     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\KY_effects\MagicEffectsPackFree\ReadMe.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>D:/Desktop/BreakOut/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
