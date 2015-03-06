@@ -11,8 +11,10 @@ public class PaddleSize : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision col){
-		GameManager.instance.clonePaddle.transform.localScale = new Vector3 (18f, 2.359376f, 2.076007f);
-		halfSize = true;
+		if (PowerUp.instance.biggerPaddle == false) {
+			GameManager.instance.clonePaddle.transform.localScale = new Vector3 (18f, 2.359376f, 2.076007f);
+			halfSize = true;
+		}
 	}
 
 }
