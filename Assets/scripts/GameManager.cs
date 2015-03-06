@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour {
 	public int blocks = 144;
 	public int score = 0;
 	public int restartDelay = 3;
-	public int highScore = 0;
 	public Text livesText;
 	public Text scoreText;
 	public GameObject gameOver;
@@ -31,9 +30,11 @@ public class GameManager : MonoBehaviour {
 		clonePaddle = Instantiate (paddle, transform.position, Quaternion.identity) as GameObject;
 
 	}
-	void Restart(){
-		Application.LoadLevel (1);
+	void Restart(){		
+
+		PowerUp.instance.biggerPaddle = false;
 		PaddleSize.halfSize = false;
+		Application.LoadLevel (1);
 	}
 	
 	void WinOrLoseCheck(){
@@ -42,25 +43,26 @@ public class GameManager : MonoBehaviour {
 			Invoke("Restart", restartDelay);
 		}
 		if (life <= 0) {
+			gameOver.SetActive(true);
+			Invoke("Restart", restartDelay);
+		}
+		if (life <= 0 || blocks <= 0) {
 			if (score > getHighScore ()) {
-				highScore += score;
 				hScore.SetActive (true);
 				setHighScore ();
 			}
-			gameOver.SetActive(true);
-			Invoke("Restart", restartDelay);
 		}
 	}
 
 	void setHighScore()
 	{
-		PlayerPrefs.SetInt ("Highscore: ", highScore);
+		PlayerPrefs.SetInt ("Highscore: ", score);
 	}
 
 	public int getHighScore()
 	{
-		highScore = PlayerPrefs.GetInt ("Highscore: ", 0);
-		return highScore;
+		score = PlayerPrefs.GetInt ("Highscore: ", 0);
+		return score;
 	}
 	
 	public void LoseLife(){

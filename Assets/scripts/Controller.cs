@@ -37,7 +37,7 @@ public class Controller : MonoBehaviour
 				innerEdge = 2;
 				outerEdge = 5;
 			} 
-			else if(PowerUp.instance.biggerPaddle == true){
+			else if(PowerUp.instance.biggerPaddle == true && !PaddleSize.halfSize){
 				xOffset = 24;
 				outerEdge = 17;
 				innerEdge = 9;
