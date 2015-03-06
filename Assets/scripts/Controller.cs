@@ -76,12 +76,12 @@ public class Controller : MonoBehaviour
 			if(contact.thisCollider == collider){
 				float ballangle = contact.point.x - transform.position.x;
 				if(ballangle > outerEdge){
-					//ballRigidbody.AddTorque(new Vector3(ballRigidbody.velocity.x * 1.5f, ballRigidbody.velocity.y, ballRigidbody.velocity.z));
+					ballRigidbody.AddTorque(new Vector3(ballRigidbody.velocity.x * 1.5f, ballRigidbody.velocity.y, ballRigidbody.velocity.z));
 					ballRigidbody.velocity = new Vector3(56.569f + speedFactor, 56.569f + speedFactor, 0);
 
 				} else if (ballangle < -outerEdge){
 				
-					//ballRigidbody.AddTorque(new Vector3(ballRigidbody.velocity.x * 1.5f, ballRigidbody.velocity.y, ballRigidbody.velocity.z));
+					ballRigidbody.AddTorque(new Vector3(ballRigidbody.velocity.x * 1.5f, ballRigidbody.velocity.y, ballRigidbody.velocity.z));
 					ballRigidbody.velocity = new Vector3(-56.569f - speedFactor, 56.569f + speedFactor, 0);
 
 				} else {
