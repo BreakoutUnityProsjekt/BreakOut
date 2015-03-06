@@ -1,17 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
 guid: f1e589844a2e74260b2a88929a60b6e1
-=======
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-guid: f1e589844a2e74260b2a88929a60b6e1
-=======
-guid: eb7ce81a87d994e2eb242be1d110c7fe
->>>>>>> origin/master
-=======
-guid: 2851324fd2abd4a43a807676ebe6b00d
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 2
@@ -36,7 +24,7 @@ TextureImporter:
   textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
-    filterMode: 1
+    filterMode: -1
     aniso: 16
     mipBias: -1
     wrapMode: 1
