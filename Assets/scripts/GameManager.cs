@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour {
 	}
 	void Restart(){
 		Application.LoadLevel (1);
-		HalfTheSize.halfSize = false;
+		PaddleSize.halfSize = false;
 	}
 	
 	void WinOrLoseCheck(){
@@ -54,10 +54,14 @@ public class GameManager : MonoBehaviour {
 		Invoke ("SetupPaddle", 3);
 		WinOrLoseCheck ();
 	}
+	public void GainLife(){
+		life++;
+		livesText.text = "Lives: " + life;
+	}
 	
 	void SetupPaddle(){
 		clonePaddle = Instantiate (paddle, transform.position, Quaternion.identity) as GameObject;
-		HalfTheSize.halfSize = false;
+		PaddleSize.halfSize = false;
 	}
 	
 	public void OnBlockDestroyed(){

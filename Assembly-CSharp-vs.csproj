@@ -51,9 +51,10 @@
      <Compile Include="Assets\scripts\Controller.cs" />
      <Compile Include="Assets\scripts\DeadZone.cs" />
      <Compile Include="Assets\scripts\GameManager.cs" />
-     <Compile Include="Assets\scripts\HalfTheSize.cs" />
      <Compile Include="Assets\scripts\LoadOnClick.cs" />
+     <Compile Include="Assets\scripts\PaddleSize.cs" />
      <Compile Include="Assets\scripts\Pause.cs" />
+     <Compile Include="Assets\scripts\PowerUp.cs" />
      <Compile Include="Assets\scripts\StartBallMovment.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
