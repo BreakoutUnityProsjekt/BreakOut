@@ -57,7 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+<<<<<<< Updated upstream
       <Project>{3BF2E433-3D4B-EA7D-0E18-4A21D8AD7473}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+=======
+      <Project>{A3418377-6DC1-0A38-BE71-7A755278C610}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+>>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
