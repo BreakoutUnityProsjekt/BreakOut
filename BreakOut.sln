@@ -5,8 +5,6 @@ Project("{A144D907-137A-63FC-3DAE-B0C8917ED9F5}") = "BreakOut", "Assembly-CSharp
 EndProject
 Project("{A144D907-137A-63FC-3DAE-B0C8917ED9F5}") = "BreakOut", "Assembly-UnityScript-firstpass.unityproj", "{3BF2E433-3D4B-EA7D-0E18-4A21D8AD7473}"
 EndProject
-Project("{A144D907-137A-63FC-3DAE-B0C8917ED9F5}") = "BreakOut", "Assembly-UnityScript.unityproj", "{BC43DCF9-4B60-FA87-0E49-6315835DF0FD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,16 +19,11 @@ Global
 		{3BF2E433-3D4B-EA7D-0E18-4A21D8AD7473}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BF2E433-3D4B-EA7D-0E18-4A21D8AD7473}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BF2E433-3D4B-EA7D-0E18-4A21D8AD7473}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BC43DCF9-4B60-FA87-0E49-6315835DF0FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC43DCF9-4B60-FA87-0E49-6315835DF0FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC43DCF9-4B60-FA87-0E49-6315835DF0FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC43DCF9-4B60-FA87-0E49-6315835DF0FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-<<<<<<< HEAD
-																																																								GlobalSection(MonoDevelopProperties) = preSolution
+																																																										GlobalSection(MonoDevelopProperties) = preSolution
 =======
 																																																							GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> Stashed changes
