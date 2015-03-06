@@ -11,10 +11,7 @@ public class Controller : MonoBehaviour
 	public float xOffset = 17f;
 	public GameObject ballPrefab;
 	public GameObject attachedBall = null;
-	public GameObject extraBall;
-	public GameObject extraBallPrefab;
 	private GameObject ballClone;
-	public bool extraBallBool = false;
 	public GameObject deadZone;
 	public Rigidbody ballRigidbody;
 	public float ballspeed = 4000f;
@@ -35,10 +32,15 @@ public class Controller : MonoBehaviour
 		if (Input.GetAxis ("Horizontal") != 0) {
 			transform.position = new Vector3 (transform.position.x + Input.GetAxis ("Horizontal") * speed * Time.deltaTime, ypos, zpos);
 
-			if(HalfTheSize.halfSize == true){
+			if(PaddleSize.halfSize == true && !PowerUp.instance.biggerPaddle){
 				xOffset = xOffset / 2 + 3;
 				innerEdge = 2;
 				outerEdge = 5;
+			} 
+			else if(PowerUp.instance.biggerPaddle == true){
+				xOffset = 24;
+				outerEdge = 17;
+				innerEdge = 9;
 			} else {
 				xOffset = 17f;
 				innerEdge = 6;
@@ -65,12 +67,7 @@ public class Controller : MonoBehaviour
 						
 
 		}
-		if(Input.GetKey(KeyCode.Q) && !extraBallBool){
 
-			extraBallBool = true;
-			extraBall = Instantiate (extraBallPrefab, transform.position + new Vector3 (0, 40, 0), Quaternion.identity) as GameObject;
-
-		}
 
 	}
 
