@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour {
 	}
 	public void Setup(){
 		clonePaddle = Instantiate (paddle, transform.position, Quaternion.identity) as GameObject;
+
 	}
 	void Restart(){
 		Application.LoadLevel (1);
@@ -56,6 +57,7 @@ public class GameManager : MonoBehaviour {
 	
 	void SetupPaddle(){
 		clonePaddle = Instantiate (paddle, transform.position, Quaternion.identity) as GameObject;
+		HalfTheSize.halfSize = false;
 	}
 	
 	public void OnBlockDestroyed(){

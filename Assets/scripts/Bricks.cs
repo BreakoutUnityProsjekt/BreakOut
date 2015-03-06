@@ -32,11 +32,11 @@ public class Bricks : MonoBehaviour {
 		// Adds more speed to the ball from these bricks
 		if (this.name == "purpleBrick") {
 			GameManager.instance.score += 6;
-			Controller.instance.speedFactor += 3;
+			Controller.instance.speedFactor += 2;
 		}
 		if (this.name == "deepblueBrick") {
 			GameManager.instance.score += 7;
-			Controller.instance.speedFactor += 5;
+			Controller.instance.speedFactor += 4;
 		}
 
 		//Destroying blocks and particles
