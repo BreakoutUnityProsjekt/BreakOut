@@ -57,12 +57,9 @@
      <Compile Include="Assets\scripts\StartBallMovment.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\KY_effects\MagicEffectsPackFree\ReadMe.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
-<<<<<<< HEAD
- <HintPath>/Users/dannemeinecke/BreakOut/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
-=======
  <HintPath>/Users/edvin/GitHub/untitled folder/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
->>>>>>> origin/master
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
