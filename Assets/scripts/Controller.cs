@@ -11,7 +11,10 @@ public class Controller : MonoBehaviour
 	public float xOffset = 17f;
 	public GameObject ballPrefab;
 	public GameObject attachedBall = null;
+	public GameObject extraBall;
+	public GameObject extraBallPrefab;
 	private GameObject ballClone;
+	public bool extraBallBool = false;
 	public GameObject deadZone;
 	public Rigidbody ballRigidbody;
 	public float ballspeed = 4000f;
@@ -20,7 +23,7 @@ public class Controller : MonoBehaviour
 	public int outerEdge = 10;
 	public int innerEdge = 6;
 	
-		// Use this for initialization
+	// Use this for initialization
 	void Start (){
 		//Spawing the ball
 		spawnBall ();
@@ -62,7 +65,12 @@ public class Controller : MonoBehaviour
 						
 
 		}
-		//Debug.Log (ballRigidbody.velocity);
+		if(Input.GetKey(KeyCode.Q) && !extraBallBool){
+
+			extraBallBool = true;
+			extraBall = Instantiate (extraBallPrefab, transform.position + new Vector3 (0, 40, 0), Quaternion.identity) as GameObject;
+
+		}
 
 	}
 
