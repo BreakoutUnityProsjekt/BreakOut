@@ -52,7 +52,7 @@
      <Compile Include="Assets\scripts\Bricks.cs" />
      <Compile Include="Assets\scripts\Controller.cs" />
      <Compile Include="Assets\scripts\DeadZone.cs" />
-     <Compile Include="Assets\scripts\Explosion.cs" />
+     <Compile Include="Assets\scripts\Explosion1.cs" />
      <Compile Include="Assets\scripts\GameManager.cs" />
      <Compile Include="Assets\scripts\LoadOnClick.cs" />
      <Compile Include="Assets\scripts\PaddleSize.cs" />
