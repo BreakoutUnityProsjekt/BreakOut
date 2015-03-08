@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour {
 		if (blocks <= 0) {
 			youWon.SetActive(true);
 			Invoke("ScoreSceen", restartDelay);
+			Time.timeScale = 0.33;
 		}
 		if (life <= 0) {
 			gameOver.SetActive(true);
