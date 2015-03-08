@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PaddleSize : MonoBehaviour {
 
-	public static bool halfSize = false;
+	public bool halfSize = false;
 	public static PaddleSize instance;
 
 	void Start(){

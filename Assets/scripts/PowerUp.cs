@@ -8,11 +8,12 @@ public class PowerUp : MonoBehaviour {
 	public GameObject extraLifeText;
 	public GameObject biggerPaddleText;
 	public GameObject dubbleScore;
-	public bool biggerPaddle = false;
+	public bool biggerPaddle;
 	public static PowerUp instance;
 	
 	void Start(){
 		instance = this;
+		biggerPaddle = false;
 	}
 	// Calls the gain life method and activates the text.
 	public void ExtraLife(){
@@ -41,10 +42,10 @@ public class PowerUp : MonoBehaviour {
 	// Resets the size of the paddle after the powerup, if the paddle was small, it will return small again.
 	// same if it was normal.
 	public void ResetPaddle(){
-		if (GameManager.instance.clonePaddle != null && !PaddleSize.halfSize) {
+		if (GameManager.instance.clonePaddle != null && !PaddleSize.instance.halfSize) {
 			GameManager.instance.clonePaddle.transform.localScale = new Vector3 (36f, 2.359376f, 2.076007f);
 
-		} else if (GameManager.instance.clonePaddle != null && PaddleSize.halfSize) {
+		} else if (GameManager.instance.clonePaddle != null && PaddleSize.instance.halfSize) {
 			GameManager.instance.clonePaddle.transform.localScale = new Vector3 (18f, 2.359376f, 2.076007f);
 
 		}

@@ -32,15 +32,13 @@ public class GameManager : MonoBehaviour {
 	}
 	public void Setup(){
 		// Sets up the paddle on its default posision.
-		PowerUp.instance.biggerPaddle = false;
-		PaddleSize.halfSize = false;
 		clonePaddle = Instantiate (paddle, transform.position, Quaternion.identity) as GameObject;
 
 	}
 	void Restart(){
 		// Restarts the game automatic, when you die.
 		PowerUp.instance.biggerPaddle = false;
-		PaddleSize.halfSize = false;
+		PaddleSize.instance.halfSize = false;
 		Application.LoadLevel (1);
 	}
 
@@ -66,7 +64,7 @@ public class GameManager : MonoBehaviour {
 	// Loads the ScoreScreen.
 	void ScoreSceen(){
 		PowerUp.instance.biggerPaddle = false;
-		PaddleSize.halfSize = false;
+		PaddleSize.instance.halfSize = false;
 		Application.LoadLevel (2);
 	}
 
@@ -90,7 +88,7 @@ public class GameManager : MonoBehaviour {
 	// making sure the size modifying variables is set to false, since the paddle will be reset.
 	void SetupPaddle(){
 		PowerUp.instance.biggerPaddle = false;
-		PaddleSize.halfSize = false;
+		PaddleSize.instance.halfSize = false;
 		clonePaddle = Instantiate (paddle, transform.position, Quaternion.identity) as GameObject;
 	}
 	// When a blokc is destroyed, subtract from total blocks, and adds to the score.

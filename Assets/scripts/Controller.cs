@@ -35,7 +35,7 @@ public class Controller : MonoBehaviour
 
 			// If the padde is reduced to half size, we need to change the xOffset so that it 
 			// does not look wierd and paddle goes out of the map.
-			if(PaddleSize.halfSize == true && !PowerUp.instance.biggerPaddle){
+			if(PaddleSize.instance.halfSize == true && !PowerUp.instance.biggerPaddle){
 				xOffset = xOffset / 2 + 3;
 				innerEdge = 1;
 				outerEdge = 3;
