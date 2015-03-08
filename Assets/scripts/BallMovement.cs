@@ -9,9 +9,4 @@ public class BallMovement : MonoBehaviour {
 	void Start () {
 		ballRidigBody.AddForce (new Vector3 (1000f, 0f, 0f));
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

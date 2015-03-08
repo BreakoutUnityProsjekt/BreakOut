@@ -9,7 +9,8 @@ public class ScoreScreen : MonoBehaviour {
 	string highScoreKey = "HighScore";
 	public Text score;
 
-
+	// Prints the score to the screen from the player prefs,
+	// I get an NullReference Exception here, Not sure why.
 	void Start(){
 		highScore = PlayerPrefs.GetInt(highScoreKey,0);
 		score.text = "HighScore: " + highScore;

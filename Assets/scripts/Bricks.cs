@@ -14,7 +14,7 @@ public class Bricks : MonoBehaviour {
 
 
 	void OnCollisionEnter(Collision other){
-		// animating the particles when the block is destroyed
+		// Animating the particles when the block is destroyed
 		particle = (GameObject) Instantiate (brickParticle, transform.position, Quaternion.identity);
 
 		// PowerUp 10%

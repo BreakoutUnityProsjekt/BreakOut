@@ -27,18 +27,26 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 		instance = this;
 		Setup ();
+		// Gets the highscore from PlayerPrefs.
 		highScore = PlayerPrefs.GetInt(highScoreKey,0);
 	}
 	public void Setup(){
+		// Sets up the paddle on its default posision.
+		PowerUp.instance.biggerPaddle = false;
+		PaddleSize.halfSize = false;
 		clonePaddle = Instantiate (paddle, transform.position, Quaternion.identity) as GameObject;
 
 	}
-	void Restart(){		
+	void Restart(){
+		// Restarts the game automatic, when you die.
 		PowerUp.instance.biggerPaddle = false;
 		PaddleSize.halfSize = false;
 		Application.LoadLevel (1);
 	}
-	
+
+	// Checks this every time block is destroyed and you lose a life.
+	// If u won it takes you to the scorescreen, and if either life or blocks
+	// is equal to zero, it will save the score if it was greater than previous.
 	void WinOrLoseCheck(){
 		if (blocks <= 0) {
 			youWon.SetActive(true);
@@ -55,11 +63,15 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 	}
-
+	// Loads the ScoreScreen.
 	void ScoreSceen(){
+		PowerUp.instance.biggerPaddle = false;
+		PaddleSize.halfSize = false;
 		Application.LoadLevel (2);
 	}
 
+	// When you lose a life, it prints the new life, destroys the paddle, and invokes the setup again.
+	// allso destroys the ball, so we wont have extra balls taking performance.
 	public void LoseLife(){
 		life--;
 		livesText.text = "Lives: " + life;
@@ -69,17 +81,19 @@ public class GameManager : MonoBehaviour {
 		PowerUp.instance.ResetPaddle ();
 		WinOrLoseCheck ();
 	}
-
+	// Gains a life and updates the text.
 	public void GainLife(){
 		life++;
 		livesText.text = "Lives: " + life;
 	}
 
+	// making sure the size modifying variables is set to false, since the paddle will be reset.
 	void SetupPaddle(){
-		clonePaddle = Instantiate (paddle, transform.position, Quaternion.identity) as GameObject;
+		PowerUp.instance.biggerPaddle = false;
 		PaddleSize.halfSize = false;
+		clonePaddle = Instantiate (paddle, transform.position, Quaternion.identity) as GameObject;
 	}
-	
+	// When a blokc is destroyed, subtract from total blocks, and adds to the score.
 	public void OnBlockDestroyed(){
 		blocks--;
 		score++; 

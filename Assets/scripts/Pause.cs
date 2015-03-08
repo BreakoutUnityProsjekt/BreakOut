@@ -12,23 +12,27 @@ public class Pause : MonoBehaviour {
 
 	void Update(){
 
+		// Very smary way to unpause and pase with the same key, and little code.
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			pauseGame = !pauseGame;
 
 		}
-
+		// Pauses the game.
 		if (pauseGame == true) {
 
 			Time.timeScale = 0;
 			pauseGame = true;
 			showText = true;
 		}
+
+		// Resumes the game.
 		if (pauseGame == false) {
 			Time.timeScale = 1;
 			pauseGame = false;
 			showText = false;
 		}
 
+		// Shows the approptiate text and buttons, when its paused.
 		if (showText == true) {
 			exitGame.SetActive(true);
 			restartGame.SetActive(true);
